@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Klee+One:wght@600&family=Zen+Maru+Gothic:wght@400;500;700&display=swap");
+/* 流体力学研究室 — シンプルな共通スタイル */
+:root{--ink:#1f2328;--sub:#5f6b76;--line:#e3e6e8;--accent:#0f6e74;--bg:#fff}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.85 "Zen Maru Gothic","Hiragino Sans","Noto Sans JP","Yu Gothic UI","Yu Gothic",system-ui,sans-serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 16px}
+a{color:var(--accent);text-underline-offset:.2em}
+a:hover{text-decoration-thickness:2px}
+
+header.site{border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.5rem 1.5rem;padding-top:1.1rem;padding-bottom:.9rem}
+.brand{color:var(--ink);text-decoration:none;font-family:"Klee One","Zen Maru Gothic",serif;font-weight:600;font-size:1.35rem;letter-spacing:.04em}
+.brand span{font-family:"Zen Maru Gothic",sans-serif}
+.brand span{display:block;font-weight:400;font-size:.78rem;color:var(--sub);letter-spacing:0}
+header nav{display:flex;flex-wrap:wrap;gap:.2rem 1.1rem;font-size:.92rem}
+header nav a{color:var(--sub);text-decoration:none;padding:.1rem 0;border-bottom:2px solid transparent}
+header nav a:hover{color:var(--ink)}
+header nav a[aria-current=page]{color:var(--ink);border-bottom-color:var(--accent)}
+header nav a.lang{color:var(--accent)}
+
+/* 改行位置の調整：行末に1〜2文字だけ残るのを防ぎ、日本語は文節で折り返す */
+p,li,td,h1,h2{text-wrap:pretty}
+:lang(ja){word-break:auto-phrase}
+main.wrap{padding-top:2rem;padding-bottom:3rem}
+h1,.h3{font-size:1.45rem;line-height:1.4;margin:0 0 .4rem}
+h2{font-size:1.15rem;margin:2.4rem 0 .6rem;padding-bottom:.3rem;border-bottom:1px solid var(--line)}
+h2.h4{font-size:1.05rem}
+h1+p.text-muted{margin-top:0}
+.text-muted{color:var(--sub)}
+small,.small{font-size:.85rem}
+hr{border:0;margin:0}
+ul,ol{padding-left:1.4em}
+li{margin-bottom:.35em}
+ol li{font-size:.94rem}
+img.img-fluid{display:block;max-width:100%;height:auto;border-radius:6px;margin:1.2rem 0}
+table{width:100%;border-collapse:collapse;margin:.5rem 0 1rem;font-size:.95rem}
+th,td{text-align:left;vertical-align:top;padding:.5rem .2rem;border-bottom:1px solid var(--line)}
+th{color:var(--sub);font-weight:500;width:9.5em;padding-right:1rem}
+th.text-nowrap{white-space:nowrap}
+u{text-decoration:none;font-weight:700}
+footer.site{border-top:1px solid var(--line);color:var(--sub);font-size:.8rem}
+footer.site .wrap{padding-top:1rem;padding-bottom:1.5rem}
+@media (max-width:560px){th{width:auto;white-space:normal!important}h1,.h3{font-size:1.3rem}}
